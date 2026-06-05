@@ -604,6 +604,30 @@ details[open] .work-toggle { color: var(--text-secondary); }
   color: var(--text-tertiary);
   letter-spacing: 0.02em;
   margin-top: auto;
+  align-items: center;
+}
+
+.cv-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  transition: all var(--dur-normal) var(--ease-out);
+  background: transparent;
+  margin-left: auto;
+}
+
+.cv-button:hover {
+  color: var(--text);
+  background: var(--surface-hover);
+  border-color: var(--border-hover);
 }
 
 .site-footer span { white-space: nowrap; }
