@@ -7,6 +7,27 @@
   'use strict';
 
   /* ----------------------------------------------------------
+     0. THEME TOGGLE
+     ---------------------------------------------------------- */
+  const themeToggleEls = document.querySelectorAll('.theme-toggle');
+
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }
+
+  themeToggleEls.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      if (currentTheme === 'dark') {
+        setTheme('light');
+      } else {
+        setTheme('dark');
+      }
+    });
+  });
+
+  /* ----------------------------------------------------------
      1. TYPEWRITER — types out roles character by character
      ---------------------------------------------------------- */
   const roleTextEl = document.getElementById('role-text');
