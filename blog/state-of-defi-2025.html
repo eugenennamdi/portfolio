@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="State of DeFi 2025 - A comprehensive overview of decentralized finance in 2025." />
+    <title>State of DeFi 2025 — Eugene Nnamdi</title>
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      /* Article Specific Styles */
+      .article-shell {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: clamp(40px, 8vw, 80px) clamp(20px, 5vw, 40px);
+      }
+      
+      .article-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--space-xl);
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+      }
+      
+      .back-link {
+        color: var(--text-secondary);
+        transition: color var(--dur-normal) var(--ease-out);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      .back-link:hover {
+        color: var(--text);
+      }
+      
+      .reading-time {
+        color: var(--text-tertiary);
+      }
+      
+      .article-header {
+        margin-bottom: var(--space-xl);
+        padding-bottom: var(--space-xl);
+        border-bottom: 1px solid var(--border);
+      }
+      
+      .article-title {
+        font-size: clamp(2.2rem, 5vw, 3.4rem);
+        font-weight: var(--fw-extrabold);
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        margin-bottom: var(--space-sm);
+        color: var(--text);
+      }
+      
+      .article-meta {
+        display: flex;
+        gap: var(--space-md);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      
+      .article-content {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: var(--text);
+      }
+      
+      .article-content h2 {
+        font-size: 1.6rem;
+        font-weight: var(--fw-bold);
+        margin: 2.5em 0 1em;
+        letter-spacing: -0.02em;
+        color: var(--text);
+      }
+      
+      .article-content h3 {
+        font-size: 1.25rem;
+        font-weight: var(--fw-semibold);
+        margin: 2em 0 0.8em;
+        color: var(--text);
+      }
+      
+      .article-content p {
+        margin-bottom: 1.5em;
+        color: var(--text-secondary);
+      }
+      
+      .article-content ul, .article-content ol {
+        margin-bottom: 1.5em;
+        padding-left: 1.5em;
+        color: var(--text-secondary);
+      }
+      
+      .article-content li {
+        margin-bottom: 0.5em;
+      }
+
+      .article-content strong {
+        color: var(--text);
+        font-weight: var(--fw-semibold);
+      }
+      
+      .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        margin: 2em 0;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+      }
+      
+      .article-content table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+        text-align: left;
+      }
+      
+      .article-content th {
+        background: #111;
+        color: #fff;
+        font-family: var(--font-mono);
+        font-weight: var(--fw-medium);
+        padding: 12px 16px;
+        white-space: nowrap;
+      }
+      
+      .article-content td {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+      }
+      
+      .article-content tr:last-child td {
+        border-bottom: none;
+      }
+      
+      .article-content tr:hover td {
+        background: var(--surface-hover);
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article-shell">
+      <nav class="article-nav reveal">
+        <a href="./index.html" class="back-link">← Back to Blog</a>
+        <span class="reading-time">15 min read</span>
+      </nav>
+
+      <header class="article-header reveal" data-delay="1">
+        <h1 class="article-title">State of DeFi 2025</h1>
+        <div class="article-meta">
+          <span>By Eugene Nnamdi</span>
+          <span>·</span>
+          <span>December 2025</span>
+          <span>·</span>
+          <span>DeFi Research</span>
+        </div>
+      </header>
+
+      <div class="article-content reveal" data-delay="2">
+        <h2>1. Introduction</h2>
+
+        <h3>1.1 Purpose of the Report</h3>
+        <p>This report provides a clear, data-backed overview of the state of decentralized finance in 2025. Its purpose is to highlight the major trends that shaped the year, analyze what went right and what went wrong across the ecosystem, and evaluate how capital, users, and protocols behaved throughout the period. The goal is to give an honest, concise picture of DeFi's performance, challenges, and progress, supported by factual data and insights.</p>
+
+        <h3>1.2 Methodology & Data Sources</h3>
+        <p>All quantitative metrics - including TVL, inflows/outflows, category performance, stablecoin supply, and protocol activity are sourced primarily from DefiLlama. Additional context is drawn from:</p>
+        <ul>
+          <li>Dune Analytics (user activity, airdrop behavior, L2 tracking)</li>
+          <li>Token Terminal (protocol revenue and fees)</li>
+          <li>L2Beat (rollup adoption and security models)</li>
+          <li>Public audit reports, governance proposals, and incident write-ups</li>
+        </ul>
+        <p>Where data varies between sources, DefiLlama serves as the baseline for consistency.</p>
+
+        <h3>1.3 Scope of Analysis</h3>
+        <p>The report covers DeFi across major ecosystems including Ethereum, Solana and leading L2s (Base, Arbitrum, Polygon, etc.) with notable activity. It focuses on:</p>
+        <ul>
+          <li>Monthly capital flows and liquidity rotations</li>
+          <li>Institutional and large-holder behavior</li>
+          <li>Performance across lending, DEXes, yield products, perps, LRTs, RWAs, and stablecoins</li>
+          <li>Major events, upgrades, incentives, hacks, and failures</li>
+          <li>Trends that strengthened the ecosystem and issues that held it back</li>
+        </ul>
+        <p>The timeframe spans December 2024 to December 2025 YTD.</p>
+
+        <h2>2. Macro Environment & Market Context</h2>
+
+        <h3>2.1 Crypto Market Backdrop</h3>
+        <p>2025 continued the bull cycle that began in late 2023, driven by strong institutional participation and expanding regulated market access. Three catalysts dominated:</p>
+        <ul>
+          <li><strong>ETF Expansion</strong>: BTC and ETH ETFs scaled globally, attracting consistent inflows from traditional asset managers.</li>
+          <li><strong>Solana ETF Launch</strong>: The approval of Solana ETFs in Q4 2025 unlocked new institutional demand.</li>
+          <li><strong>XRP Futures Catalyst</strong>: XRP surged following the launch of CME futures, reviving large-cap liquidity.</li>
+        </ul>
+
+        <h3>2.2 Interest Rate Environment & Liquidity Cycles</h3>
+        <p>Global liquidity improved as interest rates stabilized. Two regulatory tailwinds:</p>
+        <ul>
+          <li><strong>MiCA Regulation</strong>: Euro-denominated stablecoin supply roughly doubled.</li>
+          <li><strong>US Regulatory Shift</strong>: Reduced enforcement pressure lowered perceived legal risk.</li>
+        </ul>
+
+        <h3>2.3 Stablecoin Supply Trends</h3>
+        <p><strong>Market Expansion:</strong></p>
+        <ul>
+          <li>Market cap grew from $199.6B → $308.6B (+$108.9B)</li>
+          <li>Circulating supply expanded from $205.2B → $350.1B</li>
+        </ul>
+<figure style="margin: 2em 0;"><img src="./images/chart_1.png" alt="Stablecoin Market Expansion" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+
+        <p><strong>Shift Toward Yield-Bearing Stablecoins:</strong></p>
+        <ul>
+          <li>Capital in stablecoin yield strategies rose from $14.0B → $55.6B (+396%)</li>
+        </ul>
+<figure style="margin: 2em 0;"><img src="./images/chart_2.png" alt="Yield-Bearing Stablecoins" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+
+        <p><strong>Multi-Chain Fragmentation:</strong></p>
+        <ul>
+          <li>Chains hosting stablecoins increased from 103 → 142</li>
+          <li>Growth concentrated on Base, Hyperliquid, Avalanche</li>
+        </ul>
+<figure style="margin: 2em 0;"><img src="./images/chart_3.png" alt="Stablecoin Multi-Chain Fragmentation" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+
+        <h3>2.4 L1 → L2 Migration & Blockspace Economics</h3>
+        <p>Two major upgrades: Pectra (May 2025) and Fusaka (Dec 2025).</p>
+        <ul>
+          <li>Value Secured in Rollups: Down –20.6% YoY</li>
+          <li>Activity (UOPS): Transaction activity accelerated sharply in late 2025</li>
+        </ul>
+<figure style="margin: 2em 0;">
+          <img src="./images/chart_4.png" alt="L2 Value Secured" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-bottom: 1em;">
+          <img src="./images/chart_5.png" alt="L2 Activity" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+        </figure>
+
+        <h2>3. DeFi Performance Overview</h2>
+
+        <h3>3.1 Total Value Locked (TVL)</h3>
+        <p><strong>Yearly Snapshot:</strong></p>
+        <ul>
+          <li>Start (Dec 2024): $37.35B</li>
+          <li>Peak (Oct 7, 2025): $62.43B</li>
+          <li>End (Dec 2025): $46.30B</li>
+          <li>Net change: +24% YoY</li>
+        </ul>
+<figure style="margin: 2em 0;"><img src="./images/chart_6.png" alt="Yearly TVL Snapshot" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+
+        <p><strong>Category-level breakdown:</strong></p>
+        
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Current TVL</th>
+                <th>Dec 2024 TVL</th>
+                <th>Change (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Lending</td><td>$65.27B</td><td>$48.58B</td><td>+34.36%</td></tr>
+              <tr><td>Liquid Staking</td><td>$61.62B</td><td>$66.15B</td><td>-6.84%</td></tr>
+              <tr><td>Bridge</td><td>$49.68B</td><td>$40.84B</td><td>+21.63%</td></tr>
+              <tr><td>Restaking</td><td>$19.71B</td><td>$23.66B</td><td>-16.70%</td></tr>
+              <tr><td>DEXs</td><td>$17.76B</td><td>$23.79B</td><td>-25.36%</td></tr>
+              <tr><td>RWA</td><td>$16.43B</td><td>$5.20B</td><td>+215.67%</td></tr>
+              <tr><td>Canonical Bridge</td><td>$14.93B</td><td>$670.20M</td><td>+2,128.32%</td></tr>
+              <tr><td>Liquid Restaking</td><td>$11.64B</td><td>$16.73B</td><td>-30.43%</td></tr>
+              <tr><td>Basis Trading</td><td>$11.24B</td><td>$5.81B</td><td>+93.54%</td></tr>
+              <tr><td>CDP</td><td>$9.57B</td><td>$11.78B</td><td>-18.71%</td></tr>
+              <tr><td>Yield</td><td>$8.97B</td><td>$7.89B</td><td>+13.60%</td></tr>
+              <tr><td>Risk Curators</td><td>$6.05B</td><td>$1.22B</td><td>+396.11%</td></tr>
+              <tr><td>Derivatives</td><td>$3.91B</td><td>$4.95B</td><td>-21.03%</td></tr>
+              <tr><td>Farm</td><td>$1.23B</td><td>$5.67B</td><td>-78.37%</td></tr>
+            </tbody>
+          </table>
+        </div>
+<figure style="margin: 2em 0;"><img src="./images/chart_7.png" alt="Category Level TVL Breakdown" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+
+        <h3>3.2 User Activity & Protocol Usage</h3>
+<figure style="margin: 2em 0; margin-top: -1em;"><img src="./images/chart_8.png" alt="Chain Level TVL" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+        <p><strong>Monthly active users:</strong></p>
+        <ul>
+          <li>Peak: May (385.1M) and June (387.4M)</li>
+          <li>February dip: 306.4M</li>
+          <li>December 2025 (partial): 127.8M</li>
+        </ul>
+<figure style="margin: 2em 0;"><img src="./images/chart_9.png" alt="Monthly Active Users" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+        <figure style="margin: 2em 0;">
+          <img src="./images/chart_10.png" alt="DEX Spot + Perp Volumes" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-bottom: 1em;">
+          <img src="./images/chart_11.png" alt="Lending & Borrowing Volumes" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-bottom: 1em;">
+          <img src="./images/chart_12.png" alt="Yield Product Adoption" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+        </figure>
+
+        <h3>3.3 Capital Flow Analysis</h3>
+        <p><strong>Monthly flows:</strong></p>
+        
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Net Flow (USD)</th>
+                <th>Trend</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Dec 2024</td><td>-$3.49B</td><td>Outflow</td></tr>
+              <tr><td>Jan 2025</td><td>+$4.86B</td><td>Inflow</td></tr>
+              <tr><td>Feb</td><td>-$25.09B</td><td>Major Outflow</td></tr>
+              <tr><td>Mar</td><td>-$6.42B</td><td>Outflow</td></tr>
+              <tr><td>Apr</td><td>+$6.73B</td><td>Inflow</td></tr>
+              <tr><td>May</td><td>+$13.87B</td><td>Strong Inflow</td></tr>
+              <tr><td>Jun</td><td>+$706.9M</td><td>Inflow</td></tr>
+              <tr><td>Jul</td><td>+$28.25B</td><td>Peak Inflow</td></tr>
+              <tr><td>Aug</td><td>+$12.69B</td><td>Strong Inflow</td></tr>
+              <tr><td>Sep</td><td>+$4.69B</td><td>Inflow</td></tr>
+              <tr><td>Oct</td><td>-$7.92B</td><td>Outflow</td></tr>
+              <tr><td>Nov</td><td>-$30.08B</td><td>Peak Outflow</td></tr>
+              <tr><td>Dec 2025</td><td>+$4.65B</td><td>Inflow</td></tr>
+            </tbody>
+          </table>
+        </div>
+<figure style="margin: 2em 0;"><img src="./images/chart_13.png" alt="Monthly Capital Flows" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+        <figure style="margin: 2em 0;"><img src="./images/chart_14.png" alt="Flow Patterns Across Chains" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+
+        <p><strong>Top Protocols by Net Inflows:</strong></p>
+        
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Protocol</th>
+                <th>Current TVL</th>
+                <th>Net Flow</th>
+                <th>Sector</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Aave</td><td>$33.77B</td><td>+$13.44B</td><td>Lending</td></tr>
+              <tr><td>Binance Staked ETH</td><td>$11.79B</td><td>+$5.39B</td><td>Liquid Staking</td></tr>
+              <tr><td>Arbitrum Bridge</td><td>$4.58B</td><td>+$4.58B</td><td>Bridge</td></tr>
+              <tr><td>Base Bridge</td><td>$3.60B</td><td>+$3.60B</td><td>Bridge</td></tr>
+              <tr><td>Morpho</td><td>$5.89B</td><td>+$3.33B</td><td>Lending</td></tr>
+              <tr><td>Spark</td><td>$7.45B</td><td>+$2.86B</td><td>Lending</td></tr>
+              <tr><td>Babylon Protocol</td><td>$5.14B</td><td>+$2.84B</td><td>Liquid Staking</td></tr>
+              <tr><td>Maple Finance</td><td>$2.82B</td><td>+$2.50B</td><td>Lending</td></tr>
+              <tr><td>Ethena</td><td>$6.76B</td><td>+$2.32B</td><td>Stablecoin/Yield</td></tr>
+              <tr><td>TriggerX</td><td>$2.13B</td><td>+$2.13B</td><td>Yield</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>4. Sustainable Yield, Automated Yield Products & DeFAI</h2>
+
+        <h3>4.1 Sustainable Yield</h3>
+        <ul>
+          <li><strong>Real Yield Dominance</strong>: Rewards from real activity—lending interest, trading fees, RWAs</li>
+          <li><strong>Yield Compression</strong>: Stablecoin/LST yields normalized to 3–8% APY</li>
+          <li><strong>Rise of LRTs</strong>: Stacking staking yield, AVS rewards, and lending income</li>
+        </ul>
+<figure style="margin: 2em 0;"><img src="./images/chart_15.png" alt="Sustainable Yield Trends" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+
+        <h3>4.2 Automated Yield Products</h3>
+        <ul>
+          <li>AI-Assisted Rebalancing</li>
+          <li>Auto-Compounders as Base Layer (Yearn, Beefy)</li>
+          <li>Structured Strategies: restaking vaults, options vaults, RWA fixed-income vaults</li>
+        </ul>
+<figure style="margin: 2em 0;"><img src="./images/chart_16.png" alt="Automated Yield Products" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+
+        <h3>4.3 DeFAI</h3>
+        <ul>
+          <li>Base TVL fell 70% ($215.9M → $64.0M)</li>
+          <li>Staking TVL grew 1,515%</li>
+          <li>Protocol count doubled (8 → 16)</li>
+          <li>Market cap peaked at $4.81B in early Jan, corrected to $633M</li>
+        </ul>
+<figure style="margin: 2em 0;"><img src="./images/chart_17.png" alt="DeFAI Market Performance" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+
+        <h2>5. Sector Deep Dives</h2>
+
+        <h3>5.1 Lending & Money Markets</h3>
+        <ul>
+          <li>Supply TVL: $48.6B → $65.1B (+33.9%)</li>
+          <li>Borrowed TVL: $25.8B → $39.9B (+54.6%)</li>
+          <li>Peak TVL: $74.3B (Oct 10, 2025)</li>
+          <li>Aave expanded share from 41.8% → 51.7%</li>
+          <li>Morpho grew from 5.3% → 9.1%</li>
+          <li>Euler rebounded from 0.1% → 1.6%</li>
+          <li>Largest outflow: Aave –$5.85B (Oct 11, 2025)</li>
+        </ul>
+<figure style="margin: 2em 0;">
+          <img src="./images/chart_18.png" alt="Lending Sector Supply" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-bottom: 1em;">
+          <img src="./images/chart_19.png" alt="Lending Sector Borrow" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-bottom: 1em;">
+          <img src="./images/chart_20.png" alt="Lending Market Share" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+        </figure>
+
+        <h3>5.2 Yield Aggregators & Automated Vaults</h3>
+        <ul>
+          <li>TVL: $7.89B → $9.01B (+14.2%)</li>
+          <li>Peak TVL: ~$18.8B (Sept 2025)</li>
+          <li>Pendle became dominant yield infrastructure ($3.74B TVL)</li>
+        </ul>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Protocol</th>
+                <th>TVL</th>
+                <th>30d Change</th>
+                <th>Fees (30d)</th>
+                <th>P/F</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Spark Savings</td><td>$1.98B</td><td>+26.3%</td><td>N/A</td><td>N/A</td></tr>
+              <tr><td>Convex</td><td>$970M</td><td>–5.7%</td><td>$2.58M</td><td>5.39</td></tr>
+              <tr><td>Yearn</td><td>$764M</td><td>–1.1%</td><td>$1.86M</td><td>4.32</td></tr>
+              <tr><td>Beefy</td><td>$472M</td><td>+11.9%</td><td>$1.29M</td><td>18.23</td></tr>
+            </tbody>
+          </table>
+        </div>
+<figure style="margin: 2em 0;">
+          <img src="./images/chart_21.png" alt="Yield Aggregators Sector" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-bottom: 1em;">
+          <img src="./images/chart_22.png" alt="Pendle Outflows" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+        </figure>
+
+        <h3>5.3 DEX Ecosystem (Spot + Perps)</h3>
+        <ul>
+          <li>Perp DEXs overtook spot DEXs as primary trading venue</li>
+          <li>Perp-to-spot volume ratio approached 10:1</li>
+          <li>Hyperliquid: $7.42B open interest, $92.5M in 30-day fees</li>
+          <li>October 2025 flash crash: ~$19.35B in liquidations</li>
+          <li>Solana → spot execution hub, Ethereum + L2s → leveraged trading hub</li>
+        </ul>
+<figure style="margin: 2em 0;">
+          <img src="./images/chart_23.png" alt="Spot vs Perps Volume" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-bottom: 1em;">
+          <img src="./images/chart_24.png" alt="Perp DEX Landscape" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-bottom: 1em;">
+          <img src="./images/chart_25.png" alt="Chain Level DEX Dynamics" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+        </figure>
+
+        <h3>5.4 LST & LRT Markets</h3>
+        <ul>
+          <li>LSTs: ~$69.3B peak TVL, ~79% market share</li>
+          <li>LRTs: ~$17.9B peak TVL, ~21% market share</li>
+          <li>Lido dominant with $27.36B TVL</li>
+          <li>Ether.fi led LRT category (+7.95% in 30 days)</li>
+        </ul>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Protocol</th>
+                <th>Category</th>
+                <th>TVL</th>
+                <th>30d Change</th>
+                <th>Fees (Ann.)</th>
+                <th>P/F</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Lido</td><td>LST</td><td>$27.36B</td><td>-0.77%</td><td>$752.01M</td><td>0.704</td></tr>
+              <tr><td>Binance Staked ETH</td><td>LST</td><td>$11.06B</td><td>-2.65%</td><td>$297.86M</td><td>-</td></tr>
+              <tr><td>Ether.fi</td><td>LRT</td><td>$8.28B</td><td>+7.95%</td><td>-</td><td>-</td></tr>
+              <tr><td>Jito</td><td>LST</td><td>$1.87B</td><td>-9.21%</td><td>$111.42M</td><td>1.445</td></tr>
+              <tr><td>Rocket Pool</td><td>LST</td><td>$1.86B</td><td>-5.41%</td><td>$46.07M</td><td>1.034</td></tr>
+            </tbody>
+          </table>
+        </div>
+<figure style="margin: 2em 0;"><img src="./images/chart_26.png" alt="LST & LRT Markets" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+
+        <h3>5.5 RWAs</h3>
+        <ul>
+          <li>Current RWA TVL: $16.47B</li>
+          <li>Peak TVL: $18.05B (Nov 2025)</li>
+          <li>YoY Growth: Nearly 3×</li>
+          <li>Tokenized U.S. Treasuries reached $7.4–8.0B (+256% YoY)</li>
+        </ul>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Protocol</th>
+                <th>Sub Protocol</th>
+                <th>TVL</th>
+                <th>30d Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Tether Gold</td><td>tether-gold</td><td>$2.27B</td><td>+4.49%</td></tr>
+              <tr><td>Securitize</td><td>blackrock-buidl</td><td>$2.08B</td><td>-18.00%</td></tr>
+              <tr><td>Ondo Finance</td><td>ondo-yield-assets</td><td>$1.52B</td><td>+3.45%</td></tr>
+              <tr><td>Paxos Gold</td><td>paxos-gold</td><td>$1.47B</td><td>+5.91%</td></tr>
+              <tr><td>Circle USYC</td><td>circle-usyc</td><td>$1.35B</td><td>+27.19%</td></tr>
+            </tbody>
+          </table>
+        </div>
+<figure style="margin: 2em 0;"><img src="./images/chart_27.png" alt="RWA Growth" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);"></figure>
+
+        <h2>6. Ecosystem & Chain Analysis</h2>
+        <ul>
+          <li><strong>Ethereum</strong>: Settlement & Institutional Layer ($70.09B Base TVL)</li>
+          <li><strong>Solana</strong>: High-Throughput Trading Engine ($8.75B)</li>
+          <li><strong>Arbitrum & Optimism</strong>: EVM Execution Layers</li>
+          <li><strong>Base</strong>: Consumer & Retail On-Ramp</li>
+        </ul>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Chain</th>
+                <th>Primary Driver</th>
+                <th>Dominant Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Ethereum</td><td>Security & trust</td><td>Settlement, staking, institutional DeFi</td></tr>
+              <tr><td>Solana</td><td>Performance & cost</td><td>Trading, retail, experimentation</td></tr>
+              <tr><td>Arbitrum</td><td>Liquidity depth</td><td>Perps, leverage, advanced DeFi</td></tr>
+              <tr><td>Optimism</td><td>Ecosystem alignment</td><td>Superchain execution</td></tr>
+              <tr><td>Base</td><td>Distribution & UX</td><td>Retail, stablecoins, consumer apps</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>7. Risks, Lessons, and What 2025 Changed</h2>
+
+        <h3>7.1 What Broke (and Why)</h3>
+        <ul>
+          <li>Leverage Amplification via LRTs</li>
+          <li>Liquidity-Driven Depegs</li>
+          <li>Incentive-Driven Capital Fragility</li>
+          <li>Risk Opacity in Automated Systems</li>
+          <li>Correlated Collateral Assumptions</li>
+        </ul>
+
+        <h3>7.2 What Held (and Why It Mattered)</h3>
+        <ul>
+          <li>Automated Liquidation Systems</li>
+          <li>Over-Collateralized Lending Models</li>
+          <li>Infrastructure Stability Under Stress</li>
+          <li>Market-Based Risk Repricing</li>
+          <li>Protocol-Level Adaptation</li>
+        </ul>
+
+        <h3>7.3 Design & Capital Allocation Lessons</h3>
+        <ul>
+          <li>Yield Compression Is Structural</li>
+          <li>Automation Outperformed Discretion</li>
+          <li>Simplicity Beat Composability Under Stress</li>
+          <li>Execution Layers Matter More Than Monoliths</li>
+          <li>Capital Became More Selective</li>
+        </ul>
+
+        <h3>7.4 What 2025 Set Up for 2026</h3>
+        <ul>
+          <li>Consolidation Over Proliferation</li>
+          <li>Modular Financial Stacks</li>
+          <li>On-Chain Fixed Income Emergence</li>
+          <li>Automation as Default Infrastructure</li>
+          <li>Risk Migration, Not Elimination</li>
+        </ul>
+
+        <h2>8. Executive Summary & Outlook</h2>
+        <p>DeFi in 2025 transitioned from rapid experimentation to structural maturation.</p>
+
+        <p><strong>Key Takeaways:</strong></p>
+        <ul>
+          <li>DeFi Demand Proved Durable</li>
+          <li>Yield Became Real and Compressed</li>
+          <li>Leverage Was the Primary Risk Vector</li>
+          <li>Infrastructure Held Under Stress</li>
+          <li>Execution Layers Specialized</li>
+          <li>RWAs Anchored Institutional Capital</li>
+        </ul>
+
+        <p><strong>What 2025 Changed:</strong></p>
+        <ul>
+          <li>DeFi is no longer constrained by infrastructure, but by risk design</li>
+          <li>Automation outperformed discretionary management at scale</li>
+          <li>Simpler structures proved more resilient than deeply composable stacks</li>
+          <li>TVL alone lost relevance as a success metric without flow quality</li>
+        </ul>
+
+        <p><strong>Outlook for 2026:</strong></p>
+        <p>DeFi enters 2026 positioned for refinement, not reinvention. If 2021 proved DeFi was possible, and 2023–2024 proved it was resilient, 2025 proved it can operate as a real financial system under stress.</p>
+
+      </div>
+      
+      <footer style="margin-top: 4em; padding-top: 2em; border-top: 1px solid var(--border); font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-tertiary); text-align: center;">
+        © 2026 Eugene Nnamdi · Port Harcourt, Nigeria
+      </footer>
+    </div>
+    
+    <script>
+      // Simple scroll reveal
+      document.addEventListener("DOMContentLoaded", () => {
+        const supportsScrollTimeline = CSS.supports('animation-timeline', 'view()');
+        
+        if (!supportsScrollTimeline) {
+          const revealEls = document.querySelectorAll('.reveal');
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+          
+          revealEls.forEach((el) => observer.observe(el));
+        } else {
+          document.querySelectorAll('.reveal').forEach((el) => {
+            el.classList.add('is-visible');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

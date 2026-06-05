@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Blog — Eugene Nnamdi. Technical content, growth strategies, and DeFi insights." />
+    <title>Blog — Eugene Nnamdi</title>
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .blog-index-shell {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: clamp(40px, 8vw, 80px) clamp(20px, 5vw, 40px);
+      }
+      
+      .blog-header {
+        margin-bottom: var(--space-xl);
+      }
+      
+      .blog-header h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        margin-bottom: var(--space-xs);
+      }
+      
+      .blog-header p {
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+      }
+      
+      .back-nav {
+        margin-bottom: var(--space-lg);
+      }
+      
+      .back-link {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        transition: color var(--dur-normal) var(--ease-out);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      .back-link:hover {
+        color: var(--text);
+      }
+      
+      .article-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+      }
+      
+      .article-item {
+        display: block;
+        padding: var(--space-lg);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        background: var(--surface);
+        transition: box-shadow var(--dur-normal) var(--ease-out), border-color var(--dur-normal) var(--ease-out);
+      }
+      
+      .article-item:hover {
+        box-shadow: var(--shadow-md);
+        border-color: var(--border-hover);
+      }
+      
+      .article-meta {
+        display: flex;
+        gap: var(--space-sm);
+        margin-bottom: var(--space-sm);
+        align-items: center;
+      }
+      
+      .article-tag {
+        display: inline-block;
+        padding: 2px 9px;
+        border-radius: var(--radius-pill);
+        border: 1px solid var(--border);
+        background: rgba(0, 0, 0, 0.018);
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        font-weight: var(--fw-bold);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text-secondary);
+      }
+      
+      .article-date {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--text-tertiary);
+      }
+      
+      .article-item h2 {
+        font-size: 1.5rem;
+        font-weight: var(--fw-bold);
+        margin-bottom: var(--space-xs);
+        letter-spacing: -0.02em;
+      }
+      
+      .article-item p {
+        color: var(--text-secondary);
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: var(--space-sm);
+      }
+      
+      .read-more {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: var(--fw-semibold);
+        color: var(--text-tertiary);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        transition: color var(--dur-normal) var(--ease-out);
+      }
+      
+      .article-item:hover .read-more {
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blog-index-shell">
+      <nav class="back-nav reveal">
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
+      </nav>
+      
+      <header class="blog-header reveal" data-delay="1">
+        <h1>Selected Writing</h1>
+        <p>Thoughts on scaling products, building communities, and the intersection of content and growth.</p>
+      </header>
+      
+      <div class="article-list">
+        <a href="./state-of-defi-2025.html" class="article-item reveal" data-delay="2">
+          <div class="article-meta">
+            <span class="article-tag">DeFi Research</span>
+            <span class="article-date">December 2025</span>
+          </div>
+          <h2>State of DeFi 2025</h2>
+          <p>A comprehensive overview of decentralized finance in 2025, covering capital flows, LSTs/LRTs, yield aggregation, and sector deep dives.</p>
+          <span class="read-more">Read Article →</span>
+        </a>
+        
+        <a href="https://x.com/eugene_ugonna/status/2057511633509896209" target="_blank" class="article-item reveal" data-delay="3">
+          <div class="article-meta">
+            <span class="article-tag">AI & Web3</span>
+            <span class="article-date">June 2026</span>
+          </div>
+          <h2>x402 and the Race to Build the Payment Layer for Autonomous Software</h2>
+          <p>Is agentic commerce becoming real infrastructure, or are we watching another category get marketed into existence? Examining Coinbase's x402 protocol.</p>
+          <span class="read-more">Read Article →</span>
+        </a>
+      </div>
+      
+      <footer class="site-footer" style="margin-top: 4em; padding-top: 2em; border-top: 1px solid var(--border); border-bottom: none;">
+        <span>© 2026 Eugene Nnamdi</span>
+        <span>Port Harcourt, Nigeria</span>
+      </footer>
+    </div>
+    
+    <script>
+      // Simple scroll reveal
+      document.addEventListener("DOMContentLoaded", () => {
+        const supportsScrollTimeline = CSS.supports('animation-timeline', 'view()');
+        
+        if (!supportsScrollTimeline) {
+          const revealEls = document.querySelectorAll('.reveal');
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+          
+          revealEls.forEach((el) => observer.observe(el));
+        } else {
+          document.querySelectorAll('.reveal').forEach((el) => {
+            el.classList.add('is-visible');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
