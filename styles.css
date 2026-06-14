@@ -534,7 +534,7 @@ details[open] .work-toggle { color: var(--text-secondary); }
 .project-image-link {
   display: block;
   overflow: hidden;
-  flex: 0 0 45%;
+  flex: 0 0 38%;
   border-right: 1px solid var(--border);
   border-bottom: 0;
 }
@@ -842,8 +842,23 @@ details[open] .work-toggle { color: var(--text-secondary); }
 }
 
 /* ============================================================
-   RESPONSIVE — Mobile
+   RESPONSIVE — Tablet & Mobile
    ============================================================ */
+@media (max-width: 768px) {
+  .projects-grid { display: flex; flex-direction: column; }
+  
+  .project-card {
+    flex-direction: column;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .project-image-link {
+    flex: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
 @media (max-width: 540px) {
   .page-shell { padding: var(--space-md); }
 
