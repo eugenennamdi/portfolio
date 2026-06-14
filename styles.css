@@ -706,6 +706,15 @@ details[open] .work-toggle { color: var(--text-secondary); }
     padding-left: var(--space-xl);
   }
 
+  .projects-grid { grid-template-columns: 1fr; }
+  
+  .project-card {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .project-card:last-child { border-bottom: 0; }
+
   .blog-grid { grid-template-columns: 1fr; }
 
   .blog-card {
@@ -727,6 +736,7 @@ details[open] .work-toggle { color: var(--text-secondary); }
   .site-nav { gap: var(--space-sm); }
 
   .work-heading,
+  .projects-heading,
   .blog-heading { padding: var(--space-sm) var(--space-md); }
 
   .work-summary { 
@@ -740,6 +750,8 @@ details[open] .work-toggle { color: var(--text-secondary); }
   }
 
   .work-details { padding: 0 var(--space-md) var(--space-md); }
+
+  .project-content { padding: var(--space-sm) var(--space-md); }
 
   .blog-card { padding: var(--space-sm) var(--space-md); }
 
