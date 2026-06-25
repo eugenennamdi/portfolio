@@ -32,10 +32,9 @@
      ---------------------------------------------------------- */
   const roleTextEl = document.getElementById('role-text');
   const roles = [
-    'Marketing Strategist',
+    'Crypto Native',
+    'Marketing Operator',
     'Growth Architect',
-    'Content Creator',
-    'DeFi Native',
   ];
   let roleIndex = 0;
   let charIndex = 0;
