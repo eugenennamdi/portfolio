@@ -76,26 +76,6 @@
      2. CONTACT TOGGLE — dropdown for social links
      ---------------------------------------------------------- */
 
-    document.addEventListener('click', (e) => {
-      if (!contactMenu.contains(e.target)) {
-        setContactState(false);
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        setContactState(false);
-        contactToggle.focus();
-      }
-    });
-
-    contactPanel.addEventListener('click', (e) => {
-      if (e.target.closest('a')) {
-        setContactState(false);
-      }
-    });
-  }
-
   /* ----------------------------------------------------------
      3. SCROLL REVEAL — entrance animations
      ---------------------------------------------------------- */
