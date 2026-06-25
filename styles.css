@@ -717,6 +717,23 @@ details[open] .work-toggle { color: var(--text-secondary); }
   align-items: center;
 }
 
+.footer-socials {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 0 var(--space-sm);
+}
+
+.footer-socials a {
+  color: var(--text-tertiary);
+  transition: color var(--dur-normal) var(--ease-out);
+  display: inline-flex;
+}
+
+.footer-socials a:hover {
+  color: var(--text);
+}
+
 .cv-button {
   display: inline-flex;
   align-items: center;

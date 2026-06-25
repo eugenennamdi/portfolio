@@ -75,20 +75,6 @@
   /* ----------------------------------------------------------
      2. CONTACT TOGGLE — dropdown for social links
      ---------------------------------------------------------- */
-  const contactMenu = document.querySelector('.contact-menu');
-  const contactToggle = document.querySelector('.contact-toggle');
-  const contactPanel = document.querySelector('#contact-links');
-
-  function setContactState(isOpen) {
-    contactMenu.classList.toggle('is-open', isOpen);
-    contactToggle.setAttribute('aria-expanded', String(isOpen));
-    contactPanel.setAttribute('aria-hidden', String(!isOpen));
-  }
-
-  if (contactToggle) {
-    contactToggle.addEventListener('click', () => {
-      setContactState(!contactMenu.classList.contains('is-open'));
-    });
 
     document.addEventListener('click', (e) => {
       if (!contactMenu.contains(e.target)) {
