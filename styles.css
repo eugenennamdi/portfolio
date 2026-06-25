@@ -846,6 +846,7 @@ details[open] .work-toggle { color: var(--text-secondary); }
     flex: auto;
     border-right: 0;
     border-bottom: 1px solid var(--border);
+    padding: var(--space-xl);
   }
 
   .project-card:last-child { border-bottom: 0; }
@@ -875,11 +876,13 @@ details[open] .work-toggle { color: var(--text-secondary); }
     flex: auto;
     border-right: 0;
     border-bottom: 1px solid var(--border);
+    padding: var(--space-xl);
   }
 }
 
 @media (max-width: 540px) {
   .page-shell { padding: var(--space-md); }
+  .site-header { padding: 0 var(--space-md); }
 
   h1 { font-size: clamp(2rem, 10vw, 2.5rem); }
 
@@ -901,14 +904,25 @@ details[open] .work-toggle { color: var(--text-secondary); }
 
   .work-details { padding: 0 var(--space-md) var(--space-md); }
 
-  .project-content { padding: var(--space-sm) var(--space-md); }
+  .project-content { padding: var(--space-md); }
+  .project-image-link { padding: var(--space-md); }
 
   .blog-card { padding: var(--space-sm) var(--space-md); }
 
   .site-footer {
     flex-direction: column;
-    gap: var(--space-xs);
+    gap: var(--space-md);
     align-items: flex-start;
+    padding: var(--space-md) var(--space-md) 0;
+  }
+  
+  .footer-socials { margin: 0; }
+  
+  .cv-button { 
+    margin-left: 0; 
+    width: 100%; 
+    justify-content: center; 
+    margin-top: var(--space-sm);
   }
 }
 
