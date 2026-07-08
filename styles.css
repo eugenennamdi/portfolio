@@ -536,7 +536,7 @@ details[open] .work-toggle { color: var(--text-secondary); }
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid var(--border);
-  transition: background var(--dur-normal) var(--ease-out);
+  transition: background var(--dur-normal) var(--ease-out), border-color var(--dur-normal) var(--ease-out);
 }
 
 @keyframes subtleMeshMove {
@@ -550,6 +550,7 @@ details[open] .work-toggle { color: var(--text-secondary); }
   background: linear-gradient(120deg, var(--surface), rgba(30, 42, 55, 0.4), var(--surface-hover), rgba(20, 28, 40, 0.4));
   background-size: 200% 200%;
   animation: subtleMeshMove 8s ease infinite;
+  border-bottom-color: rgba(255, 255, 255, 0.15);
 }
 
 .project-image-link {
@@ -640,9 +641,25 @@ details[open] .work-toggle { color: var(--text-secondary); }
 .project-links {
   display: flex;
   gap: var(--space-md);
-  margin-top: var(--space-xs);
+  margin-top: var(--space-sm);
   font-family: var(--font-mono);
   font-size: 0.75rem;
+}
+
+.project-tech {
+  display: flex;
+  gap: var(--space-xs);
+  margin-top: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 4px;
 }
 
 .project-links a {
@@ -654,6 +671,15 @@ details[open] .work-toggle { color: var(--text-secondary); }
 
 .project-links a:hover {
   border-color: var(--text);
+}
+
+.jump-arrow {
+  display: inline-block;
+  transition: transform var(--dur-normal) var(--ease-out);
+}
+
+.project-links a:hover .jump-arrow {
+  transform: translate(2px, -2px);
 }
 
 /* ============================================================
@@ -771,10 +797,27 @@ details[open] .work-toggle { color: var(--text-secondary); }
   color: var(--text-tertiary);
   transition: color var(--dur-normal) var(--ease-out);
   display: inline-flex;
+  position: relative;
+}
+
+.footer-socials a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 1px;
+  background: var(--text);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur-normal) var(--ease-out);
 }
 
 .footer-socials a:hover {
   color: var(--text);
+}
+
+.footer-socials a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .cv-button {
