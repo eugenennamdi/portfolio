@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,11 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css" />
     <script>
-      const savedTheme = localStorage.getItem('theme');
-      const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (savedTheme) { document.documentElement.setAttribute('data-theme', savedTheme); }
-      else if (systemPrefersDark) { document.documentElement.setAttribute('data-theme', 'dark'); }
-      else { document.documentElement.setAttribute('data-theme', 'light'); }
+      try { localStorage.removeItem('theme'); } catch (e) {}
     </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D51WEQC07X"></script>
